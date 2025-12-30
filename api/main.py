@@ -42,7 +42,6 @@ def get_todo(id: int):
 @api.post('/todos')
 def create_todo(todo: dict):
     new_todo_id = max(todo['id'] for todo in todos ) + 1
-    print(new_todo_id) 
 
     new_todo = {
         "id": new_todo_id,
